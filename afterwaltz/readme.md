@@ -24,7 +24,7 @@ Your <s>ladies </s>files will be waiting for you wherever you told them  to be (
 *Since Polka hasn't been fully implemented as of yet, you can change the various settings **simply by editing the script**. Though these settings are kinda self-explanatory, I'm still going to be providing information here.*
 
 ## Compiling it yourself
-You don't really have to (since AegiSub do support . But if you do...
+You don't really have to . But if you insist...
 
 ```
 luac afterwalts.lua -o aw.luac
