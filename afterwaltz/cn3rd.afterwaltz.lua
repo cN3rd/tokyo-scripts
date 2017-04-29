@@ -38,9 +38,9 @@ function afterwaltz_prepare()
 	local executable = "\""..vDubExe.."\"";
 	local command = executable.." /s \""..scriptPath.."\""
 	
-	f = assert(io.open(batPath, "w"));
-	f:write(command);
-	f:close();
+	file = io.open(batPath,"w")
+	file:write(command);
+	file:close();
 end
 
 function afterwaltz_waltz(subtitles,selected_lines,active_line)
@@ -84,9 +84,9 @@ VirtualDub.SaveAVI("]]..afterwaltz_vprep(video_folder.."\\")..startFrm..", "..(e
 	vdscript = vdscript.."VirtualDub.Close();"
 	
 	-- write to file
-	f = io.open(scriptPath,"w")
-	f:write(vdscript);
-	f:close();
+	file = io.open(scriptPath,"w")
+	file:write(vdscript);
+	file:close();
 	
 	-- run!
 	os.execute(batPath);
@@ -113,8 +113,6 @@ end
 
 -- AFTER POLKA
 -- Print anything - including nested tables
-
--- IGNORE THESE FUNCTIONS. THESE ARE ONLY USED FOR DEBUG.
 function table_print (tt, indent, done)
   done = done or {}
   indent = indent or 0
